@@ -1,5 +1,6 @@
 """Краулер."""
 
+import aiofiles
 import asyncio
 
 import aiohttp
@@ -59,8 +60,8 @@ async def save_article(url, session, path, soup, title):
     """Запись статьи."""
     article = title + '.html'
     path_file = os.path.join(path, article)
-    with open(path_file, 'w') as f:
-        f.write(str(soup))
+    async with aiofiles.open(path_file, 'w') as f:
+        await f.write(str(soup))
     await find_comments(url, session, path, soup)
 
 
@@ -100,8 +101,8 @@ async def save_comment(soup, path, number):
 
     article = f'comment_{number}.html'
     path_file = os.path.join(path, article)
-    with open(path_file, 'w') as f:
-        f.write(str(soup))
+    async with aiofiles.open(path_file, 'w') as f:
+        await f.write(str(soup))
 
 
 async def main():

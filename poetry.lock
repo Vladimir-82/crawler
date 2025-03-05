@@ -1,4 +1,12 @@
 [[package]]
+name = "aiofiles"
+version = "24.1.0"
+description = "File support for asyncio."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
 name = "aiohappyeyeballs"
 version = "2.4.6"
 description = "Happy Eyeballs for asyncio"
@@ -188,9 +196,13 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "1a2b2e8d5c92a5d323fb0738a915cf81a460a399859c5fb97e0bedd4baecec6d"
+content-hash = "6072064e9d4ab9f7830627d2fdebfc0349320844091d2ad3c1ff33660f66449e"
 
 [metadata.files]
+aiofiles = [
+    {file = "aiofiles-24.1.0-py3-none-any.whl", hash = "sha256:b4ec55f4195e3eb5d7abd1bf7e061763e864dd4954231fb8539a0ef8bb8260e5"},
+    {file = "aiofiles-24.1.0.tar.gz", hash = "sha256:22a075c9e5a3810f0c2e48f3008c94d68c65d763b9b03857924c99e57355166c"},
+]
 aiohappyeyeballs = [
     {file = "aiohappyeyeballs-2.4.6-py3-none-any.whl", hash = "sha256:147ec992cf873d74f5062644332c539fcd42956dc69453fe5204195e560517e1"},
     {file = "aiohappyeyeballs-2.4.6.tar.gz", hash = "sha256:9b05052f9042985d32ecbe4b59a77ae19c006a78f1344d7fdad69d28ded3d0b0"},
